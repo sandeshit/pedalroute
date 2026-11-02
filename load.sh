@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Simulated morning rush: riders asking for routes between random docking stations.
 #   ./load.sh start   starts the "morning-rush" pod (8 riders in parallel, stops by itself after 30 min)
-#   ./load.sh stop    stops it and prints how many routes were served
+#   ./load.sh stop    stops it
 set -euo pipefail
 case "${1:-}" in
   start)
