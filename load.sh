@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Simulated morning rush: riders asking for routes between random docking stations.
-#   ./load.sh start   starts the "morning-rush" pod (8 riders in parallel, stops by itself after 30 min)
+#   ./load.sh start   starts the "morning-rush" pod (8 riders in parallel, stops by itself after 50 min)
 #   ./load.sh stop    stops it
 set -euo pipefail
 case "${1:-}" in
@@ -15,7 +15,7 @@ metadata:
     app.kubernetes.io/name: morning-rush
 spec:
   restartPolicy: Never
-  activeDeadlineSeconds: 1800
+  activeDeadlineSeconds: 3000
   containers:
     - name: riders
       image: curlimages/curl:8.10.1
