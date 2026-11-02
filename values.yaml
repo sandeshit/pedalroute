@@ -1,0 +1,20 @@
+image: python:3.12-slim
+
+replicaCount: 1
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 60
+
+resources:
+  requests:
+    memory: 64Mi
+  limits:
+    memory: 128Mi
+
+cityGrid: 60
+
+service:
+  port: 80

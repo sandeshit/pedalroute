@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-app
+  labels:
+    {{- include "pedalroute.labels" . | nindent 4 }}
+data:
+  app.py: |
+{{ .Files.Get "app.py" | indent 4 }}

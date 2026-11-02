@@ -1,0 +1,9 @@
+# Not part of the chart
+.git/
+.gitignore
+README.md
+reports/
+load.sh
+watch.sh
+__pycache__/
+.DS_Store

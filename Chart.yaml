@@ -1,0 +1,6 @@
+apiVersion: v2
+name: pedalroute
+description: Route-planning API for the city bike-share
+type: application
+version: 0.3.0
+appVersion: "1.0"

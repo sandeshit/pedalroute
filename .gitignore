@@ -1,0 +1,4 @@
+reports/*.txt
+reports/*.yaml
+__pycache__/
+.DS_Store
